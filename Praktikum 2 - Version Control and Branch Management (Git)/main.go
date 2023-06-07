@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	forename := "farhan"
-	surname := "fadhilah"
+	job := "IT Development"
 	fmt.Printf("Hello %v", forename)
 }
