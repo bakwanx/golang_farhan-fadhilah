@@ -4,8 +4,7 @@ import "fmt"
 
 func main() {
 	forename := "farhan"
-  surname := "fadhilah"
+  	surname := "fadhilah"
 	job := "IT Dev"
 	fmt.Printf("Hello %v", forename)
-	//merge to main
 }
