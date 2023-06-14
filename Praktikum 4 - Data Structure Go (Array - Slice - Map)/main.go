@@ -35,15 +35,13 @@ func problem1(arrayA []string, arrayB []string) []string {
 	return result
 }
 
-func problem2(angka string) []int {
-	var tempMap = map[string]bool{}
-	var result []int
+func problem2(angka string) []int64 {
+	var temp int64
+
 	for i := 0; i < len(angka); i++ {
-		if tempMap[string(angka[i])] != true {
-			tempMap[string(angka[i])] = true
-			result = append(result, strconv.ParseInt(string(angka[i])))
-		}
+		var intCon, _ = strconv.ParseInt(angka[i], 2, 0)
+		temp = temp ^ intCon
 	}
 
-	return []int{1, 2, 3}
+	return []int64{1, 2, 3}
 }
