@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "88a37f6c-9109-4ad8-902d-be95634b2174",
+		"name": "Problem 1 Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9288849"
+	},
+	"item": [
+		{
+			"name": "News API 1 - All articles mentioning Apple from yesterday, sorted by popular publishers first",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{NEWS_URL}}everything?q=apple&from=2023-06-23&to=2023-06-23&sortBy=popularity&apiKey=2afb93176dcd4198b16ccae08f9ddc99",
+					"host": [
+						"{{NEWS_URL}}everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "apple"
+						},
+						{
+							"key": "from",
+							"value": "2023-06-23"
+						},
+						{
+							"key": "to",
+							"value": "2023-06-23"
+						},
+						{
+							"key": "sortBy",
+							"value": "popularity"
+						},
+						{
+							"key": "apiKey",
+							"value": "2afb93176dcd4198b16ccae08f9ddc99"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "News API 2 - All articles about Tesla from the last month, sorted by recent first",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{NEWS_URL}}everything?q=tesla&from=2023-05-24&sortBy=publishedAt&apiKey=2afb93176dcd4198b16ccae08f9ddc99",
+					"host": [
+						"{{NEWS_URL}}everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "tesla"
+						},
+						{
+							"key": "from",
+							"value": "2023-05-24"
+						},
+						{
+							"key": "sortBy",
+							"value": "publishedAt"
+						},
+						{
+							"key": "apiKey",
+							"value": "2afb93176dcd4198b16ccae08f9ddc99"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "News API 3 - Top business headlines in the US right now",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{NEWS_URL}}top-headlines?country=us&category=business&apiKey=2afb93176dcd4198b16ccae08f9ddc99",
+					"host": [
+						"{{NEWS_URL}}top-headlines"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "us"
+						},
+						{
+							"key": "category",
+							"value": "business"
+						},
+						{
+							"key": "apiKey",
+							"value": "2afb93176dcd4198b16ccae08f9ddc99"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "News API 4 - Top headlines from TechCrunch right now",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{NEWS_URL}}top-headlines?sources=techcrunch&apiKey=2afb93176dcd4198b16ccae08f9ddc99",
+					"host": [
+						"{{NEWS_URL}}top-headlines"
+					],
+					"query": [
+						{
+							"key": "sources",
+							"value": "techcrunch"
+						},
+						{
+							"key": "apiKey",
+							"value": "2afb93176dcd4198b16ccae08f9ddc99"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "News API 5 - All articles published by the Wall Street Journal in the last 6 months, sorted by recent first",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{NEWS_URL}}everything?domains=wsj.com&apiKey=2afb93176dcd4198b16ccae08f9ddc99",
+					"host": [
+						"{{NEWS_URL}}everything"
+					],
+					"query": [
+						{
+							"key": "domains",
+							"value": "wsj.com"
+						},
+						{
+							"key": "apiKey",
+							"value": "2afb93176dcd4198b16ccae08f9ddc99"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swapi API 1 - films",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SWAPI_URL}}films/",
+					"host": [
+						"{{SWAPI_URL}}films"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swapi API 2 - Film Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SWAPI_URL}}films/1",
+					"host": [
+						"{{SWAPI_URL}}films"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swapi API 3 - people",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SWAPI_URL}}people",
+					"host": [
+						"{{SWAPI_URL}}people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swapi API 4 - planets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SWAPI_URL}}people",
+					"host": [
+						"{{SWAPI_URL}}people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swapi API 5 - starships",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SWAPI_URL}}starships",
+					"host": [
+						"{{SWAPI_URL}}starships"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Virt Server API - Get Client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{VIRTSERVER_URL}}client?p=2&rp=10",
+					"host": [
+						"{{VIRTSERVER_URL}}client"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "2"
+						},
+						{
+							"key": "rp",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Virt Server API - Post Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client_id\": 1234,\r\n  \"client_key\": \"CLIENT01\",\r\n  \"client_secret\": \"SECRET01\",\r\n  \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{VIRTSERVER_URL}}client",
+					"host": [
+						"{{VIRTSERVER_URL}}client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Virt Server API - Delete Client",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{VIRTSERVER_URL}}client/1234",
+					"host": [
+						"{{VIRTSERVER_URL}}client"
+					],
+					"path": [
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Virt Server API - Put Client",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client_id\": 1234,\r\n  \"client_key\": \"CLIENT01\",\r\n  \"client_secret\": \"SECRET01\",\r\n  \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{VIRTSERVER_URL}}client/1234",
+					"host": [
+						"{{VIRTSERVER_URL}}client"
+					],
+					"path": [
+						"1234"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "NEWS_URL",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "SWAPI_URL",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "VIRTSERVER_URL",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
