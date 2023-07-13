@@ -11,7 +11,7 @@ var DB *gorm.DB
 
 func ConnectDB() {
 	var err error
-	DB, err = gorm.Open(sqlite.Open("app.db"), &gorm.Config{})
+	DB, err = gorm.Open(sqlite.Open("app.db"), &gorm.Config{}) // ganti ke db mysql
 	if err != nil {
 		panic(err.Error())
 	}
