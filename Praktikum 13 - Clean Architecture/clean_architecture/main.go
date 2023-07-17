@@ -1,8 +1,8 @@
 package main
 
 import (
-	"belajar-go-echo/config"
-	"belajar-go-echo/route"
+	"clean_architecture/config"
+	"clean_architecture/route"
 )
 
 func main() {
