@@ -2,6 +2,7 @@ package config
 
 import (
 	"clean_architecture/model"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

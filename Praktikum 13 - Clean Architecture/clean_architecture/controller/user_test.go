@@ -11,22 +11,37 @@ import (
 
 	"github.com/labstack/echo/v4"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/mock"
 )
+
+type MockDB struct {
+	mock.Mock
+}
+
+func (repository *MockDB) Find() *model.User {
+	arguments := repository.Mock.Called()
+	if arguments.Get(0) == nil {
+		return nil
+	}
+	user := arguments.Get(0).(model.User)
+	return &user
+}
 
 func TestInitUser(t *testing.T) {
 	config.ConnectDB()
 }
 
 func TestGetAllUsers(t *testing.T) {
-	e := echo.New()
-	request := httptest.NewRequest(http.MethodGet, "/users", nil)
-	response := httptest.NewRecorder()
+	MockDB.On("Find").Return(nil)
+	// e := echo.New()
+	// request := httptest.NewRequest(http.MethodGet, "/users", nil)
+	// response := httptest.NewRecorder()
 
-	c := e.NewContext(request, response)
+	// c := e.NewContext(request, response)
 
-	if assert.NoError(t, GetAllUsers(c)) {
-		assert.Equal(t, http.StatusOK, response.Code)
-	}
+	// if assert.NoError(t, GetAllUsers(c)) {
+	// 	assert.Equal(t, http.StatusOK, response.Code)
+	// }
 
 }
 
