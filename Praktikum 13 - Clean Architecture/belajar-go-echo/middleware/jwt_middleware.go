@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"clean_architecture/config"
+	"belajar-go-echo/config"
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
