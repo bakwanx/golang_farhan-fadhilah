@@ -1,0 +1,13 @@
+repo project :
+https://github.com/bakwanx/ci_cd_golang
+
+access IP public :
+http://54.161.203.243/
+
+access dns public : 
+http://ec2-54-161-203-243.compute-1.amazonaws.com/
+
+check end point :
+GET = http://ec2-54-161-203-243.compute-1.amazonaws.com:8080/books
+POST = http://ec2-54-161-203-243.compute-1.amazonaws.com:8080/login
+GET = http://ec2-54-161-203-243.compute-1.amazonaws.com:8080/users (jwt)
